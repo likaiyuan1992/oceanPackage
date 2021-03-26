@@ -1,10 +1,16 @@
 <template>
-  <div class="home">home</div>
+  <div class="home">
+    <Banner />
+  </div>
 </template>
 
 <script>
-export default {
 
+import Banner from '../components/banner.vue'
+export default {
+  components: {
+    Banner
+  }
 }
 </script>
 
