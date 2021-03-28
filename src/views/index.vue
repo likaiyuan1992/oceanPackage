@@ -2,7 +2,7 @@
   <div class="home">
     <div class="head">
       <div class="head_center flex flex-sb flex-ac">
-        <span><img
+        <span class="logo"><img
           src="//17536101.s21i.faiusr.com/4/ABUIABAEGAAg8OOS3QUotM_x8AYwrAI4Zw.png"
           alt=""
         ></span>
@@ -34,11 +34,18 @@
         <router-view />
       </div>
     </main>
+    <footer>
+      <fooBar />
+    </footer>
   </div>
 </template>
 
 <script>
+import fooBar from '../components/footBar'
 export default {
+  components: {
+    fooBar
+  },
   data () {
     return {
       tabData: [
@@ -48,10 +55,6 @@ export default {
           url: '/home'
         },
         {
-          title: '公司简介',
-          key: '2',
-          url: '/companyInfo'
-        }, {
           title: '服务案列',
           key: '3',
           url: '/example'
@@ -60,9 +63,9 @@ export default {
           key: '4',
           url: '/contract'
         }, {
-          title: '加入我们',
+          title: '关于我们',
           key: '5',
-          url: '/joinUs'
+          url: '/aboutUs'
         }
       ]
     }
@@ -72,7 +75,7 @@ export default {
 
 <style lang='scss' scoped>
 .home {
-  height: 130px;
+
   .head {
     height: 100%;
     background-color: #1890ff;
@@ -125,4 +128,22 @@ export default {
     }
   }
 }
+.logo img,.r_img img{width:100%;height: 100%}
+</style>
+<style>
+.router-link-exact-active{
+  /* border-bottom: 1px solid #40a9ff */
+  position: relative;
+  justify-content: center;
+}
+.router-link-exact-active::before{
+    content: '';
+    position: absolute;
+    bottom:5px;
+    left:50%;
+    transform: translateX(-50%);
+    width:50%;
+    height:1px;
+    background-color: #40a9ff;
+  }
 </style>

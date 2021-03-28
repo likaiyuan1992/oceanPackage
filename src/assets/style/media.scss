@@ -1,0 +1,61 @@
+@media screen and (max-width: 650px) {
+    #app{
+        *{font-size: 6px;}
+        .right_phone p{margin-bottom:2px}
+        .head_center{
+            width: 100%;
+        }
+        .logo{
+            width: 120px;
+            height:40px;
+            margin-left: 10px;
+        }
+       .r_img{
+           width:20px;
+       }
+       main{
+           width: 90%
+       }
+       .main_tab a{
+           padding: 0 10px;
+       }
+        .slick-slide{height:200px}
+        .list_ul{margin-top:30px}
+        .list_ul p{width: 90%}
+      
+        .about_t .cont_r{padding: 10px;line-height: 12px;}
+        .about_b li{width: 50%}
+        .info_bane{height:120px}
+        .about_face{
+            margin: 20px 0px 0px 0px;
+            li{padding:0;.img_p{width:50px;height:34px}}
+            li:nth-child(2n+1){
+                padding-right:10px;
+            }
+        }
+        p{margin-bottom:2px;}
+        .nav_top_first,.nav_top_second{margin-right:20px;}
+        .footer{width:90%;height:auto;.nav{margin-top:15px}}
+        .nav_top p{line-height: 10px;}
+        .main_tab a,.cont_p span,.list_ul .list_cent{font-size: 8px;}
+        .solve_img{
+            height: 160px;
+            display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .solve_main{
+            .banner_h1{
+                margin: 0;
+                text-align: center;
+            }
+            .banner_h3{
+                text-align: center;
+                margin:0;
+            }
+            .al_lunbo,.lindong_box{margin:0;padding:0}
+        }
+    }
+  
+   
+}

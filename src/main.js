@@ -5,7 +5,8 @@ import router from './router'
 import { Button, Carousel, Tag, Icon } from 'ant-design-vue'
 
 import 'ant-design-vue/dist/antd.css' // or 'antd/dist/antd.less'
-import './assets/css/common.css'
+import './assets/style/common.css'
+import './assets/style/media.scss'
 Vue.config.productionTip = false
 Vue.use(Button)
 Vue.use(Carousel)
