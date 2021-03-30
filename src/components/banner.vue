@@ -18,16 +18,16 @@
       <a-icon type="right-circle" />
     </div>
     <div>
-      <h3>1</h3>
+      <img :src="require('../../static/common/images/1.jpeg')" alt="">
     </div>
     <div>
-      <h3>2</h3>
+       <img :src="require('../../static/common/images/2.jpeg')" alt="">
     </div>
     <div>
-      <h3>3</h3>
+     <img :src="require('../../static/common/images/3.jpeg')" alt="">
     </div>
     <div>
-      <h3>4</h3>
+      <img :src="require('../../static/common/images/4.jpeg')" alt="">
     </div>
   </a-carousel>
 </template>
