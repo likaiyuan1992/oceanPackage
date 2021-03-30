@@ -1,0 +1,64 @@
+
+/*重置css*/
+* {
+  margin: 0;
+  padding: 0;}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;color: rgba(0,0,0,0); }
+
+input {
+  text-decoration: none; }
+
+ul li {
+  list-style: none;list-style-type:none; }
+
+img {
+  border: none; }
+
+.clearfix {
+  clear: both; }
+
+.hide-check-btn {
+  display: none;
+  width: 0;
+  height: 0; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+em {
+  font-style: normal; }
+
+body {
+  font-family: "\5FAE\8F6F\96C5\9ED1",Arial,HELVETICA,"微软雅黑";
+  margin: 0 auto;
+  position: relative; }
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+input[type="button"],input[type="submit"],input[type="reset"]{ -webkit-appearance:none; appearance:none; outline:none;}/*去除input默认样式*/
+
+html, body {
+  width: 100%;
+  height:auto;
+  /*overflow-x: hidden;*/
+  min-width: 1300px;
+  position: relative;
+}/*重置css end*/
+
+.w1200{
+  width: 1200px;
+  height: 100%;
+  /*overflow: hidden;*/
+  margin: 0 auto;
+}
+
+
+
+

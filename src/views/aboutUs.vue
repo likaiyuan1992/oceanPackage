@@ -8,23 +8,26 @@
       </div>
       <div class="publicBenefit">
         <!-- 栏目标题 -->
-        <h2 v-text="publicBenefit.title" />
+        <!-- <h2 v-text="publicBenefit.title" /> -->
         <!-- 公司理念 -->
-        <p v-text="publicBenefit.content" />
+        <!-- <p v-text="publicBenefit.content" />
         <div class="item">
           <ul>
-            <!-- 公益项目图片 -->
-            <li v-for="(item,index) in publicBenefit.publicBenefitImg" :key="index">
-              <img :src="item.src" :alt="item.alt">
+
+            <li v-for="(item,index) in publicBenefit.publicBenefitImg"
+                :key="index">
+              <img :src="item.src"
+                   :alt="item.alt">
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import api from '../assets/api/indexApi.js'
 export default {
   metaInfo: {
     title:
@@ -42,15 +45,21 @@ export default {
       }
     ]
   },
-  data () {
+  created() {
+    this.getContactData()
+  },
+  methods: {
+    getContactData() {
+      api.getComInfo({}).then(res => {
+        if (res.length) {
+          this.companyProfile = res[0]
+        }
+      })
+    }
+  },
+  data() {
     return {
-      companyProfile: {
-        // 标题
-        title: '公司简介',
-        // 内容
-        content:
-          '青玖科技(长春)有限公司,是一家以“互联网+”销售服务理念为基础、结合企业产品和服务的运营情况、创新开发简洁高效互联网产品的企业。服务涵盖微信公众号、微信小程序、网站、APP定制开发;计算机软件技术研发、新媒体运营、软件的运营与维护、广告设计、网络推广、网站建设、技术咨询、技术服务等。公司拥有十年经验专业技术团队，能够提供专业高效的技术服务。'
-      },
+      companyProfile: {},
       publicBenefit: {
         // 栏目标题
         title: '我们在行动',
@@ -63,22 +72,6 @@ export default {
             src: 'https://www.qjtco.com/assets/image/publicBenefit (1).jpg',
             // 公益项目图片描述
             alt: '为藏区募集救命药'
-          },
-          {
-            src: 'https://www.qjtco.com/assets/image/publicBenefit%20(2).jpg',
-            alt: '吉青吉心工程'
-          },
-          {
-            src: 'https://www.qjtco.com/assets/image/publicBenefit (3).jpg',
-            alt: '吉青吉心工程'
-          },
-          {
-            src: 'https://www.qjtco.com/assets/image/publicBenefit (4).jpg',
-            alt: '吉青吉心工程'
-          },
-          {
-            src: 'https://www.qjtco.com/assets/image/publicBenefit (5).jpg',
-            alt: '吉青吉心工程'
           }
         ]
       }

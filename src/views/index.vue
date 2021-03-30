@@ -75,7 +75,6 @@ export default {
 
 <style lang='scss' scoped>
 .home {
-
   .head {
     height: 100%;
     background-color: #1890ff;
@@ -105,6 +104,7 @@ export default {
   main {
     width: 54%;
     margin: 0 auto;
+    min-height: calc(100vh - 363px);
     .main_tab {
       a {
         padding: 0 40px;
@@ -128,22 +128,26 @@ export default {
     }
   }
 }
-.logo img,.r_img img{width:100%;height: 100%}
+.logo img,
+.r_img img {
+  width: 100%;
+  height: 100%;
+}
 </style>
 <style>
-.router-link-exact-active{
+.router-link-exact-active {
   /* border-bottom: 1px solid #40a9ff */
   position: relative;
   justify-content: center;
 }
-.router-link-exact-active::before{
-    content: '';
-    position: absolute;
-    bottom:5px;
-    left:50%;
-    transform: translateX(-50%);
-    width:50%;
-    height:1px;
-    background-color: #40a9ff;
-  }
+.router-link-exact-active::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: #40a9ff;
+}
 </style>

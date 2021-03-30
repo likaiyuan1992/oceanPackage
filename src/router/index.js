@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 const router = new Router({
-  mode: 'history',
+  //   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
 
@@ -15,6 +15,11 @@ const router = new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import('@/views/index.vue'),
       children: [
+        {
+          path: '/',
+          component: () => import('@/views/home.vue'),
+          name: 'home'
+        },
         {
           path: '/home',
           component: () => import('@/views/home.vue'),
