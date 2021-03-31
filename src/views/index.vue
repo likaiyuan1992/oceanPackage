@@ -2,29 +2,23 @@
   <div class="home">
     <div class="head">
       <div class="head_center flex flex-sb flex-ac">
-        <span class="logo"><img
-          src="//17536101.s21i.faiusr.com/4/ABUIABAEGAAg8OOS3QUotM_x8AYwrAI4Zw.png"
-          alt=""
-        ></span>
+        <span class="logo"><img src="//17536101.s21i.faiusr.com/4/ABUIABAEGAAg8OOS3QUotM_x8AYwrAI4Zw.png"
+               alt=""></span>
         <i class="h4_txt">Your overseas office</i>
         <div class="flex flex-ac">
           <div class="right_phone flex flex-dc flex-jb flex1">
             <p>服务热线</p>
             <p>05250525</p>
           </div>
-          <span class="r_img"><img
-            src="//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgvrWYwwUovtWd1AIwNDg4.png"
-            alt=""
-          ></span>
+          <span class="r_img"><img src="//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgvrWYwwUovtWd1AIwNDg4.png"
+                 alt=""></span>
         </div>
       </div>
     </div>
     <main>
       <div class="main_tab flex">
-        <span
-          v-for="item in tabData"
-          :key="item.key"
-        >
+        <span v-for="item in tabData"
+              :key="item.key">
           <router-link :to="item.url">
             {{ item.title }}
           </router-link>
@@ -46,7 +40,7 @@ export default {
   components: {
     fooBar
   },
-  data () {
+  data() {
     return {
       tabData: [
         {

@@ -1,38 +1,44 @@
 <template>
-  <a-carousel
-    arrows
-    autoplay
-  >
-    <div
-      slot="prevArrow"
-      class="custom-slick-arrow"
-      style="left: 10px;zIndex: 1"
-    >
+  <a-carousel arrows
+              autoplay>
+    <div slot="prevArrow"
+         class="custom-slick-arrow"
+         style="left: 10px;zIndex: 1">
       <a-icon type="left-circle" />
     </div>
-    <div
-      slot="nextArrow"
-      class="custom-slick-arrow"
-      style="right: 10px"
-    >
+    <div slot="nextArrow"
+         class="custom-slick-arrow"
+         style="right: 10px">
       <a-icon type="right-circle" />
     </div>
-    <div>
-      <img :src="require('../../static/common/images/1.jpeg')" alt="">
+    <div v-for="(item,index) in bannerData"
+         :key='index'>
+      <img :src="item"
+           alt="">
     </div>
-    <div>
-       <img :src="require('../../static/common/images/2.jpeg')" alt="">
-    </div>
-    <div>
-     <img :src="require('../../static/common/images/3.jpeg')" alt="">
-    </div>
-    <div>
-      <img :src="require('../../static/common/images/4.jpeg')" alt="">
-    </div>
+
   </a-carousel>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      bannerData: []
+    }
+  },
+  created() {
+    this.getBanner()
+  },
+  methods: {
+    getBanner() {
+      this.api.getBanner({}).then(res => {
+        if (res.banerUlr.length) {
+          this.bannerData = res.banerUlr
+        }
+      })
+    }
+  }
+}
 </script>
 <style scoped>
 /* For demo */
