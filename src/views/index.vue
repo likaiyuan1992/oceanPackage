@@ -191,14 +191,15 @@ export default {
 .right_bar {
   position: fixed;
   z-index: 99999;
+  opacity: 1;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  transition: all linear 0.4s;
+  transition: all ease-in-out 0.2s;
   ul {
-    transition: all linear 2s;
+    transition: all ease-in-out 0.2s;
     position: fixed;
     z-index: 9999;
     right: 0;
@@ -233,7 +234,8 @@ export default {
   }
 }
 .hide_bar {
-  display: none;
+  opacity: 0;
+  z-index: -1;
   ul {
     right: -70%;
   }
