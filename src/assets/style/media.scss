@@ -1,6 +1,7 @@
 @media screen and (max-width: 650px) {
     #app{
         *{font-size: 6px;}
+        
         .right_phone p{margin-bottom:2px}
         .head_center{
             width: 100%;
@@ -10,13 +11,16 @@
             height:40px;
             margin-left: 10px;
         }
+        .contain{padding-top:15px}
        .r_img{
            width:20px;
+           display: none;
        }
        main{
            width: 90%;
-           min-height: calc(100vh - 235px);
+           min-height: calc(100vh - 198px);
        }
+       .main_tab{display: none;}
        .main_tab a{
            padding: 0 15px;
        }
@@ -69,5 +73,6 @@
             width: 8px;
             margin-right:2px
           }
+         .mian_img{display: block;}
     }
 }
