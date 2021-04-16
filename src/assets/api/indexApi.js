@@ -6,6 +6,7 @@ let api = {
     // 联系我们
     getContacts: () => request.get('/contactUs'),
     // 获取bannerUrl
-    getBanner: () => request.get('/banner')
+    getBanner: () => request.get('/banner'),
+    setPv: () => request.put('/pv')
 }
 export default api

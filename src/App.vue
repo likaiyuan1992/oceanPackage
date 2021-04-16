@@ -9,6 +9,9 @@
 export default {
   name: 'App',
   components: {
+  },
+  mounted() {
+    this.api.setPv().then(res => { console.log(res) })
   }
 }
 </script>
