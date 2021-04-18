@@ -2,7 +2,7 @@
   <div class="home">
     <div class="head">
       <div class="head_center flex flex-sb flex-ac">
-        <span class="logo"><img src="//17536101.s21i.faiusr.com/4/ABUIABAEGAAg8OOS3QUotM_x8AYwrAI4Zw.png"
+        <span class="logo"><img :src="require('../../static/common/images/logo.png')"
                alt=""></span>
         <i class="h4_txt">Your overseas office</i>
         <div class="flex flex-ac">
@@ -10,7 +10,7 @@
             <p>服务热线</p>
             <p>05250525</p>
           </div>
-          <span class="r_img"><img src="//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgvrWYwwUovtWd1AIwNDg4.png"
+          <span class="r_img"><img src="../../static/common/icon/tel.png"
                  alt=""></span>
           <span @click='show=true'
                 class="mian_img"><img src="../../static/common/icon/mianbaoxie.png"
@@ -132,22 +132,22 @@ export default {
 .home {
   .head {
     height: 100%;
-    background-color: #1890ff;
+    background-color: #fff;
     .head_center {
       height: 100%;
       width: 56%;
       margin: 0 auto;
-      transform: translateX(-6%);
+    
       .h4_txt {
         font-size: 32px;
         font-weight: bold;
-        color: #fff;
+      
       }
       .right_phone {
         p {
           margin: 0;
           font-size: 16px;
-          color: rgb(255, 255, 255);
+        
           font-weight: bold;
         }
       }

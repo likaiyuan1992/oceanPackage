@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="code_box">
-        <p class="contact_code"><img src=""
+        <p class="contact_code"><img :src="require('../../static/common/images/weiCode.jpg')"
                alt=""></p>
         <p>扫一扫，微信咨询</p>
       </div>

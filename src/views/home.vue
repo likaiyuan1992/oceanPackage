@@ -2,22 +2,24 @@
   <div class="home">
     <Banner />
     <p class="cont_p"><span>核心业务</span>CORE BUSINESS</p>
-    <p class="cont_p">阿甘海外仓布局美国、英国、德国 、法国、意大利、西班牙、日本、 加拿大，致力打造您的海外办事处。</p>
+    <p class="cont_p">马丁海外仓布局美国，日本，意大利，西班牙，将为您的货物保驾护航。</p>
     <ul class="flex list_ul flex-jb">
       <li class="text-ct" v-for="litem in listData" :key="litem.id">
-        <p><img :src="litem.imgUrl" alt=""></p>
-        <p class="list_cent">{{ litem.title }}</p>
+       
+        <p class="list_cent" ><span>{{ litem.title }}</span></p>
+        <p class="title">{{ litem.title }}</p>
         <p>{{ litem.content }}</p>
       </li>
     </ul>
     <div class="about_us">
-      <p class="cont_p"><span>关于我们</span>ABOUT US</p>
+      <p class="cont_p"><span>我们的优势</span>ABOUT US</p>
       <div class="flex about_t flex-ac">
-        <p class="flex1 flex flex-ac"><img src="//17536101.s21i.faiusr.com/4/ABUIABAEGAAg8OOS3QUotM_x8AYwrAI4Zw.png.webp" alt=""></p>
+        <p class="flex1 flex flex-ac"><img :src="require('../../static/common/images/logo_big.png')"></p>
         <p class="flex1 cont_r">
-          阿甘海外仓，致力为广大跨境卖家朋友提供细致、全面的海外落地服务。公司成立之初就重金打造自有海外仓库，全华人管理，力求灵活、经济与高效。团队同仁经验丰富，集结于跨境圈多个服务行业，可为卖家朋友提供个性化的服务方案。
-          阿甘有幸与您结识，愿我们携手共建，您的海外办事处！
+         退货换标：马丁海外仓退货换标全面升级，已经单独设立新泽西换标仓，操作速度极大提升，2000件以内换标，一般1至2天即可打包发走，并且可以享受长达40天的免租期。<br/>
+         一件代发：一件代发货服务免30天仓租,单量稳定的情况下可协商延长至免租三个月甚至永久免租。国内发来入仓的货可在2个工作日内入库，强大的WMS管理系统和优秀的团队实现了库存、订单状态实时同步，同时让海外仓代发变得如此简单。
         </p>
+        
       </div>
       <ul class="about_b flex-jb  flex flex-wp">
         <li class="flex flex-wp" v-for="aItem in aboutData" :key="aItem.id">
@@ -59,24 +61,21 @@ export default {
   data () {
     return {
       listData: [{
-        imgUrl: '//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgzo6XwwUonvTLjAUwMDgx.png.webp',
-        title: '退货换标',
-        content: '亚马逊退货换标转运改善问题库存',
+
+        title: '移仓换标',
+        content: '为亚马逊卖家提供专属服务:贴标，换标，换包装，发回FBA',
         id: 1
       }, {
-        imgUrl: '//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgzo6XwwUonvTLjAUwMDgx.png.webp',
-        title: '退货换标',
-        content: '亚马逊退货换标转运改善问题库存',
+        title: '一件代发',
+        content: '一件代发服务，由海外仓直接派送至买家手中',
         id: 2
       }, {
-        imgUrl: '//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgzo6XwwUonvTLjAUwMDgx.png.webp',
-        title: '退货换标',
-        content: '亚马逊退货换标转运改善问题库存',
+        title: '中转服务',
+        content: '货物暂存海外仓，需要时补货进FBA',
         id: 3
       }, {
-        imgUrl: '//12452007.s61i.faiusr.com/4/AD0Ip4H4BRAEGAAgzo6XwwUonvTLjAUwMDgx.png.webp',
-        title: '退货换标',
-        content: '亚马逊退货换标转运改善问题库存',
+        title: '产品检测',
+        content: '将亚马逊不可售退货，检测出好的产品整理出来，翻新上架FBA继续销售。',
         id: 4
       }],
       aboutData: [{
@@ -132,11 +131,12 @@ export default {
 }
 .list_ul{
   margin-top:60px;
-  p{
-    width: 60%
+  p.title{font-size: 16px;}
+  li{
+    width:22%;
   }
   .list_cent{
-    color: rgba(246, 124, 1, 1);
+    
     font-size: 16px;;
   }
 }
@@ -217,6 +217,64 @@ overflow: hidden;
 
       }
     }
+  }
+}
+.list_ul li:first-child .list_cent{
+background: #ED7D31;
+&::after{
+    border-right: 40px solid #ED7D31;
+}
+}
+.list_ul li:nth-child(2) .list_cent{
+background: #D17B5C;
+&::after{
+    border-right: 40px solid #D17B5C;
+}
+}
+.list_ul li:nth-child(3) .list_cent{
+background: #B98982;
+&::after{
+    border-right: 40px solid #B98982;
+}
+}
+.list_ul li:nth-child(4) .list_cent{
+background: #A5A5A5;
+&::after{
+    border-right: 40px solid #A5A5A5;
+}
+}
+.list_cent{
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+
+
+  span{
+    color:#fff;
+    font-size: 26px;
+    margin-left:40px;
+  }
+  &::after{
+  content: "";
+  position:absolute;
+  right:-80px;
+  top:0;
+  transform: rotate(180deg);
+  border-top: 40px solid transparent;
+
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid transparent;
+  }
+  &::before{
+  content: "";
+  position:absolute;
+left:0;
+  top:0;
+  transform: rotate(180deg);
+  border-top: 40px solid transparent;
+  border-right: 40px solid #fff;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid transparent;
   }
 }
 </style>
